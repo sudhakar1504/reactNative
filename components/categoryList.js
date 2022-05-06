@@ -3,7 +3,7 @@ import React from 'react'
 import colors from '../Constant/colors';
 const CategoryList = ({item,getDetails}) => {
   return (
-    <TouchableOpacity  style={styles.card} onPress={()=> getDetails(item.idMeal)}>
+                <TouchableOpacity  style={styles.card} onPress={()=> getDetails(item.idMeal)}>
                     <Image source={{uri: item.strMealThumb}} resizeMode="contain" style={styles.thumbNail}/>
                     <Text numberOfLines={2} style={styles.cardTitle}>{item.strMeal}</Text>
                 </TouchableOpacity>
@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
         fontSize:18,
         fontWeight:'700',
         width: '90%',
-        marginVertical:5
+        marginVertical:5,
+        color:colors.white
     }
 })

@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View ,ScrollView,Image,ImageBackground, TouchableOpacity } from 'react-native'
 import React,{useEffect,useState} from 'react';
 import { AntDesign } from '@expo/vector-icons';
+import colors from '../Constant/colors';
 
 const RecipeDetails = ({route,navigation}) => {
   const[instruction,setInstruction] = useState(8)
@@ -23,8 +24,8 @@ const RecipeDetails = ({route,navigation}) => {
       }
       
     }
-    console.log(IngredientName);
-    console.log(Measure);
+    // console.log(IngredientName);
+    // console.log(Measure);
     // setIngredents(IngredientName)
     // console.log(ingredents);
 function readMore(){
@@ -85,10 +86,10 @@ const styles = StyleSheet.create({
     flex :1,
     paddingHorizontal:15,
     paddingTop:30,
-    marginTop:40
+    backgroundColor:colors.white
   },
   mealsContainer:{
-    paddingVertical:10
+    paddingVertical:10,
   },
   mealName:{
     fontSize:36,

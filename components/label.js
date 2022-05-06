@@ -6,9 +6,9 @@ const Label = ({index,item,ID,GetCat}) => {
     
 
   return (
-    <TouchableOpacity  style={[index === ID ? styles.labelActive : styles.label,]} onPress={()=> {GetCat(item.strCategory,index)}}>
+    <TouchableOpacity  style={[index === ID ? styles.labelActive : styles.label,]} onPress={()=> {GetCat(item,index)}}>
 
-    <Text style={[index === ID ? styles.lableTextActive : styles.lableText,]}>{item.strCategory}</Text>
+    <Text style={[index === ID ? styles.lableTextActive : styles.lableText,]}>{item}</Text>
 </TouchableOpacity>
   )
 }
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
         borderRadius:10
     },
     lableText:{
-        color: colors.Primary,
+        color: colors.white,
         fontSize:22,
         fontWeight:'500'
     },

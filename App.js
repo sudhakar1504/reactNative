@@ -1,5 +1,5 @@
-import React from "react";
-import { ImageBackground, StyleSheet, Text, TouchableOpacity, View,SafeAreaView,Button } from "react-native";
+import React,{useEffect} from "react";
+import { ImageBackground, StyleSheet, Text, TouchableOpacity, View,SafeAreaView,Button  } from "react-native";
 import colors from "./Constant/colors";
 import { AntDesign } from '@expo/vector-icons'; 
 
@@ -8,8 +8,12 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Navigation from "./Navigation/Navigation";
 import RecipeDetails from './components/RecipeDetails'
+import SpecificCategory from "./Screens/SpecificCategory";
 
 const Splash =({navigation})=>{
+  const getStart = () =>{
+    navigation.navigate('Main')
+  }
  return(
   <View style={styles.container}>
   <ImageBackground source={{uri: 'https://i.pinimg.com/564x/90/28/92/902892c349915425b849fd579be2cf6a.jpg'}} resizeMode="cover" style={styles.image}>
@@ -17,9 +21,7 @@ const Splash =({navigation})=>{
     <Text style={styles.Titles}>Let's </Text>
     <Text style={styles.Titles}>Cooking</Text>
     <Text style={styles.singleDescrition}>Find best recipes for cooking</Text>
-    <TouchableOpacity style={styles.start} activeOpacity={0.9} onPress={()=>{
- navigation.navigate('Main')
-    }}>
+    <TouchableOpacity style={styles.start} activeOpacity={0.9} onPress={getStart}>
       <Text style={styles.BtnText}>Start Cooking</Text>
       <AntDesign name="arrowright" size={30} color={colors.white} />
       </TouchableOpacity>
@@ -33,11 +35,13 @@ const Splash =({navigation})=>{
 const Stack = createNativeStackNavigator();
 
 
+
 const App = () => (
   <NavigationContainer>
   <Stack.Navigator>
     <Stack.Screen name="Home" component={Splash} options={{ headerShown: false }}/>
     <Stack.Screen name="Main" component={Navigation} options={{ headerShown: false }}/>
+    <Stack.Screen name="Specific" component={SpecificCategory} options={{ headerShown: false }}/>
     <Stack.Group screenOptions={{ presentation: 'modal' }}>
         <Stack.Screen name="MyModal" component={RecipeDetails} options={{ headerShown: false }}/>
       </Stack.Group>  
@@ -50,7 +54,7 @@ const App = () => (
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop:0
+    marginTop:0,
   },
   image: {
     flex: 1,
