@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     BackgroundImage:{
         width: 300,
         height:200,
-        backgroundColor:colors.darkImageBG,
+        backgroundColor:colors.ImageBG,
         borderRadius:20,
     },
     TextBG:{

@@ -54,9 +54,9 @@ const Navigation = ({navigation}) => {
                 else if(route.name == 'Category'){
                     IconName = focused ? 'ios-fast-food-sharp' : 'ios-fast-food-outline'
                 }
-                else if(route.name == 'Profile'){
-                    IconName = focused ? 'people-circle' : 'people'
-                }
+                // else if(route.name == 'Profile'){
+                //     IconName = focused ? 'people-circle' : 'people'
+                // }
 
                 return <Ionicons name={IconName} size={focused ? 35 : 25} color={focused ? 'white' : 'black'}/>
             }
@@ -66,7 +66,7 @@ const Navigation = ({navigation}) => {
         <Tab.Screen name="Home" component={Home} options={{ headerShown: false } } />
         <Tab.Screen name="Search" component={Search} options={{ headerShown: false }}/>
         <Tab.Screen name="Category" component={Category} options={{ headerShown: false }}/>
-        <Tab.Screen name="Profile" component={Profile} options={{ headerShown: false }}/>
+        {/* <Tab.Screen name="Profile" component={Profile} options={{ headerShown: false }}/> */}
     
       </Tab.Navigator>
    

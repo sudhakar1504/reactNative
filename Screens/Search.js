@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
   search_continer:{
     flex:1,
     alignItems:'center',
-    backgroundColor:'black'
+    backgroundColor:'white'
   },
   inputContainer:{
     width: 300,
@@ -162,6 +162,6 @@ const styles = StyleSheet.create({
   searchTitle:{
     fontSize:20,
     fontWeight:'600',
-    color:colors.white
+    color:colors.Primary
   }
 })

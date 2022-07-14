@@ -31,6 +31,6 @@ const styles = StyleSheet.create({
         fontWeight:'700',
         width: '90%',
         marginVertical:5,
-        color:colors.white
+        color:colors.black
     }
 })

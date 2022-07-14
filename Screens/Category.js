@@ -48,7 +48,7 @@ const onRefresh = React.useCallback(async () => {
   return (
     <SafeAreaView style={styles.specific_container}>
     <ScrollView showsVerticalScrollIndicator="false" refreshControl={
-          <RefreshControl refreshing={refreshing} onRefresh={onRefresh}  tintColor={colors.white}/>
+          <RefreshControl refreshing={refreshing} onRefresh={onRefresh}  tintColor={colors.black}/>
         }>
     <View style={styles.Container} >
         <View style={styles.card_Holder}>
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
   specific_container:{
     paddingHorizontal:4,
     flex:1,
-    backgroundColor:colors.black
+    backgroundColor:colors.white
   },
     Container:{
         flex:1,

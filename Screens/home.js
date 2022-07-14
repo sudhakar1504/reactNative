@@ -191,14 +191,14 @@ export default Home
 
 const styles = StyleSheet.create({
   heading:{
-backgroundColor:colors.black,
+backgroundColor:colors.white,
   },
 
     container:{
         marginHorizontal : 1,
         paddingTop:20,
         paddingHorizontal:10,
-        backgroundColor:colors.black
+        backgroundColor:colors.white
     },
     paddings:{
       paddingBottom:120
@@ -207,13 +207,13 @@ backgroundColor:colors.black,
         fontSize : 36,
         width: '70%',
         fontWeight: '700',
-        color:colors.white
+        color:colors.black
     },
     popuplarLabel:{
         fontSize:25,
         marginTop:20,
         marginBottom:5,
-        color:colors.white,
+        color:colors.black,
         fontWeight:'600'
     },
     horz:{
